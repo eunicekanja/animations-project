@@ -1,0 +1,37 @@
+body{
+  background-color: #333;
+}
+.box{
+  background-color: #fff;
+  height:200px ;
+  width: 200px;
+  position: relative;
+ animation-name: myanimation;
+ animation-duration: 4s;
+ animation-iteration-count: 1;/*Times of animation executing*/
+ animation-delay: 2s;/*starts after 2sec*/
+ /*animation-direction: reverse;starts in reverse*/
+ animation-fill-mode: forwards;/*remains a circle when it gets to the top*/
+}
+@keyframes myanimation{
+  0%{background-color: white; /*left:0px; top:0px; */border-radius: 0 0 0 0; }
+  25%{background-color: lavenderblush; /*left:300px; top:0px;*/
+  border-radius: 50% 0 0 0;}
+  50%{background-color: red; /*left:300px; top:300px*/; border-radius: 50% 50% 0 0;}
+  75%{background-color: blue; /*left:0px; top:300px;*/border-radius: 50% 50% 50% 0;}
+  100%{background-color: white; /*left:0px; top:0px;*/border-radius: 50% 50% 50% 50%;}
+}
+.box2{
+  background-color: white;
+  height:300px;
+  width:300px; 
+  margin: auto;
+  position: relative;
+  transition-property: background, border-radius, transform;/*you can set this property to all to animate all properties*/
+  transition-duration: 2s;/*you can set durations for the diff properties*/
+}
+.box2:hover{
+  background: red;
+  border-radius: 50%;
+  transform: rotateY(180deg);
+}
